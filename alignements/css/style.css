@@ -1,0 +1,31 @@
+/* CSS commun */
+.boite { height: 150px; margin-bottom: 1rem; border: 2px dashed #2E75B6; }
+.boite span { width: 60px; padding: 1rem; background-color: #1F3864;
+              color: white; text-align: center; }
+
+/* b1 : côte à côte, en haut à gauche, sans étirement en hauteur */
+.b1 { display: flex; align-items: flex-start; }
+
+/* b2 : groupés au centre (horizontal et vertical) */
+.b2 { display: flex; justify-content: center; align-items: center; }
+
+/* b3 : premier à gauche, dernier à droite, deuxième au milieu */
+.b3 { display: flex; justify-content: space-between; }
+
+/* b4 : en bas à droite, dans l'ordre 3, 2, 1 */
+.b4 { display: flex; flex-direction: row-reverse; align-items: flex-end; }
+
+/* b5 : en colonne, centrés horizontalement, 10px d'écart */
+.b5 { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+
+/* b6 : espaces égaux avant, entre et après ; l'élément 2 collé en bas */
+.b6 { display: flex; justify-content: space-evenly; }
+.b6 span:nth-child(2) { align-self: flex-end; }
+
+/* b7 : l'élément 2 prend toute la place restante */
+.b7 { display: flex; }
+.b7 span:nth-child(2) { flex-grow: 1; }
+
+/* b8 : l'élément 3 s'affiche en premier */
+.b8 { display: flex; }
+.b8 span:nth-child(3) { order: -1; }

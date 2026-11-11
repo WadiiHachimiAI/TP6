@@ -1,0 +1,89 @@
+/* 1. Base */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #F4F7FB;
+    color: #263238;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* 2. En-tête : logo, menu, panier alignés verticalement */
+.entete {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;          /* évite le débordement en petite fenêtre */
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: #1F3864;
+}
+
+.logo { height: 50px; }
+
+/* 3. Menu : liens blancs espacés de 1.5rem */
+.menu { display: flex; gap: 1.5rem; }
+
+.menu a,
+.panier {
+    color: white;
+    text-decoration: none;
+}
+
+.panier { margin-left: auto; }   /* poussé tout à droite */
+
+/* 4. Cartes qui passent à la ligne */
+.plats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.plat {
+    flex: 1 1 250px;
+    /* 5. Aspect de la carte */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.plat img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.plat h2,
+.plat p {
+    margin: 0;
+    padding: 0.75rem 1rem 0;
+}
+
+/* 6-7. Pied collé en bas, prix à gauche, bouton à droite */
+.pied {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 1rem;
+}
+
+.prix { font-weight: 600; }
+
+.ajouter {
+    padding: 8px 14px;
+    background-color: #2878D0;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.ajouter:hover { background-color: #1F3864; }
